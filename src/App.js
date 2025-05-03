@@ -4,8 +4,10 @@ import Cart from './coompoents/Cart';
 import Home from './coompoents/Home';
 import './App.css';
 import { BrowserRouter,Route,Routes } from 'react-router-dom';
+import { useState } from 'react';
 
 function App() {
+  const[cart,setCart]=useState([])
   return (
   <>
   
@@ -15,8 +17,8 @@ function App() {
     <div>
     
     <Routes>
-    <Route path="/" element={<Home/>}/>
-    <Route path="/cart" element={<Cart/>}/>
+    <Route path="/" element={<Home cart={cart} setCart={setCart}/>}/>
+    <Route path="/cart" element={<Cart cart={cart} setCart={setCart}/>}/>
     </Routes>
     </div>
     
