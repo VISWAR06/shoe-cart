@@ -1,15 +1,26 @@
 
+import Heeader from './coompoents/Heeader';
+import Cart from './coompoents/Cart';
+import Home from './coompoents/Home';
 import './App.css';
-import Header from './components/Header'
-import Carti from './components/Cartitem'
-import Footer from './components/Footer'
+import { BrowserRouter,Route,Routes } from 'react-router-dom';
+
 function App() {
   return (
-    <div className="App bg-black min-h-screen">
-    <Header/>
-    <Carti/>
-    <Footer/>
+  <>
+  <BrowserRouter>
+  <Heeader/>
+  
+    <div>
+    <Routes>
+    <Route path="/" element={<Home/>}/>
+    <Route path="/cart" element={<Cart/>}/>
+    </Routes>
     </div>
+    
+  
+  </BrowserRouter>
+  </>
   );
 }
 
