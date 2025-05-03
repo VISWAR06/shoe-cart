@@ -10,6 +10,7 @@ import Img9 from '../Assets/nine.jpg';
 import Img10 from '../Assets/ten.jpg';
 import Img11 from '../Assets/ele.jpg';
 import Img12 from '../Assets/twe.jpg';
+import { useCart } from '../../../context/context';
 
 const products = [
   { id: 1, name: 'Nike Air Force 1`07', amount:'$120', image:Img1},
@@ -27,6 +28,7 @@ const products = [
 ];
 
 export default function Cart() {
+  const {addToCart}=useCart()
   return (
     <div>
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-5'>
@@ -44,7 +46,8 @@ export default function Cart() {
             <div className="mb-3 px-2">
               <h1 className="mb-2">{prod.name}</h1>
               <p className="mb-3">{prod.amount}</p>
-              <button className="border border-white rounded-sm hover:bg-yellow-400 hover:text-white bg-white text-black transition-colors">
+              <button  onClick={() => addToCart(prod)}
+              className="border border-white rounded-sm hover:bg-yellow-400 hover:text-white bg-white text-black transition-colors">
                 Add cart
               </button>
             </div>
