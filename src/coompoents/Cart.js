@@ -8,11 +8,11 @@ export default function Cart({ cart, setCart }) {
   }, [cart]);
 
   return (
-    <div>
+    <div className="bg-black text-white h-screen ">
       <h2 className="font-bold text-xl mb-4">Products</h2>
       <div>
         {cart.map((product) => (
-          <div key={product.id} className="border border-violet-600 h-32 w-full mb-4 p-2 flex items-center gap-4">
+          <div key={product.id} className="border border-red-600 h-32 w-full mb-4 p-2 flex items-center gap-4">
             <img src={product.image} alt={product.name} className="h-full w-auto object-cover" />
             <div>
               <h3 className="font-semibold">{product.name}</h3>

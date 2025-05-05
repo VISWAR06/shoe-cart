@@ -10,7 +10,7 @@ setCart(cart.filter((c)=>
     }
     return (
         <div >
-<div className="border  border-violet-700 bg-white h-100 w-full text-center">
+<div className="border border-double border-red-700 bg-yellow-300 h-100 w-80 text-center">
     <img src={things.image} alt="iamge"
     className="h-80 w-full"
     />

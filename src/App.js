@@ -14,7 +14,7 @@ function App() {
   <BrowserRouter>
   
   <Heeader/>
-    <div>
+    <div className='bg-black'>
     
     <Routes>
     <Route path="/" element={<Home cart={cart} setCart={setCart}/>}/>
